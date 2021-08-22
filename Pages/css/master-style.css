@@ -1,7 +1,109 @@
-html {
-    background-color:#111111;
+* ,*::after,*::before{
+    box-sizing: border-box;
     margin:0;
   }
 
-  
-  
+.container{
+    background: #161616;
+    display:grid;
+    grid-template:
+        "pro" 100vh
+        "w1" 80vh
+        "b1" 80vh
+        "w2" 80vh
+        "epi" 80vh /
+        1fr  
+}
+/*
+================
+     Font
+================
+ */
+
+.white{
+    color:azure;
+}
+
+.black{
+    color:#0a0a0a;
+}
+/*
+================
+     Header
+================
+ */
+
+
+header{
+    background: #0a0a0a;
+    padding:1.5rem;
+    display: flex;
+    position: relative;
+}
+
+@media (max-width: 600px) {
+    .nav_list,header {
+      flex-direction: column;
+      justify-content:center;
+      align-items: center;
+    }
+  }
+header h4{
+    padding-left: 10%;
+    color:whitesmoke;
+    letter-spacing: 3px;
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 1.5rem;
+    font-weight: 200;
+}
+
+header span.dot
+{
+    font-weight:bold;
+}
+
+nav{
+    padding-right: 10%;
+    padding-top: 10px;
+    flex-grow: 1;
+    /* background: wheat; */
+}
+
+.nav_list{
+    list-style: none;
+    display: flex;
+    float:right;
+    gap:1.5em;
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.nav_list a{
+    color:white;
+    text-decoration: none;
+}
+
+.nav_list a:hover{
+    color:chocolate;
+    text-decoration: none;
+    transition: .3s;
+}
+
+
+/*
+================
+     Sections
+================
+ */
+
+.w1{
+    background: #fff;
+    grid-area: w1;
+}
+
+
+.w2{
+    background: #fff;
+    grid-area: w2;
+}
+
