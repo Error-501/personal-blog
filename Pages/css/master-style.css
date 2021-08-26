@@ -3,16 +3,35 @@
     margin:0;
   }
 
+  :root
+  {
+      --blacka:#161616;
+      --blackb:#0a0a0a;
+  }
+
 .container{
-    background: #161616;
+    background: var(--blacka);
     display:grid;
     grid-template:
+        "start" 100vh
         "pro" 100vh
         "w1" 80vh
         "b1" 80vh
         "w2" 80vh
         "epi" 80vh /
         1fr 
+}
+
+@media (min-width:860px){
+    .container{
+        grid-template:
+            "start pro" 100vh
+            "w1 w1" 80vh
+            "b1 b1" 80vh
+            "w2 w2" 80vh
+            "epi epi" 80vh /
+            50% 50%
+    }
 }
 /*
 ================
@@ -25,7 +44,7 @@
 }
 
 .black{
-    color:#0a0a0a;
+    color:var(--blackb);
 }
 /*
 ================
@@ -35,7 +54,7 @@
 
 
 header{
-    background: #0a0a0a;
+    background: var(--blackb);
     padding:1.5em;
     display: flex;
     position: relative;
@@ -95,6 +114,15 @@ nav{
      Sections
 ================
  */
+
+ .start{
+    grid-area: start;
+}
+
+.pro{
+    grid-area: pro;
+}
+
 .w1{
     background: #fff;
     grid-area: w1;
