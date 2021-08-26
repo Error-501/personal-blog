@@ -1,5 +1,5 @@
 * ,*::after,*::before{
-    box-sizing: border-box;
+    box-sizing: border-box; 
     margin:0;
   }
 
@@ -7,6 +7,7 @@
   {
       --blacka:#161616;
       --blackb:#0a0a0a;
+      --orange:#f86d0a;
   }
 
 .container{
@@ -46,6 +47,15 @@
 .black{
     color:var(--blackb);
 }
+
+.cen{
+    display: block;
+    width:100%;
+    margin: 0 auto;
+    padding-block:2rem;
+    text-align: center;
+}
+
 /*
 ================
      Header
@@ -103,7 +113,7 @@ nav{
 }
 
 .nav_list a:hover{
-    color:chocolate;
+    color:var(--orange);
     text-decoration: none;
     transition: .3s;
 }
@@ -179,4 +189,98 @@ nav{
     height: 100%;
     object-fit:contain;
     
+}
+
+
+/*
+================
+     About Page
+================
+ */
+ .abt--con {
+    position: relative;
+    width: 100%;
+}
+
+
+
+ .abt--evl{
+     display: block;
+     width:100%;
+     height:100%;
+     margin-top: 5%;
+     overflow: hidden;
+}
+
+.abt--img{
+    /* background: #f00; */
+    display:block;
+    margin-inline: auto;
+    margin-bottom: -10%;
+    margin-top: -5%;
+    width:85%;
+    object-fit: cover;
+    filter: sepia(1);
+    opacity: .96;
+}
+
+.abt--over {
+    position: absolute;
+    margin-inline: auto;
+    right: 0;
+    bottom:0;
+    width: 85%;
+    left:0;
+    height: 100%;
+
+    opacity: 0;
+    overflow: hidden;
+    background-color: #0a0a0a;
+
+    text-transform: uppercase;
+  }
+
+  .abt--con:hover .abt--over{
+    transition:.5s ease-in-out;
+    opacity:.98;
+  }
+  
+.abt--content{
+    max-width: 100%;
+    height: 100%;
+    /* background: #00f; */
+    margin:1rem 4rem;
+    display: flex;
+    gap:5rem;
+}
+.smile--con{
+    width:36%;
+    height: 45%;
+    background:#f00;
+}
+  
+.smile{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.ser{
+    text-align: right;
+    text-transform:capitalize;
+    transform: translateY(-30px);
+    color: var(--orange);
+}
+
+.abt--txt{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 3rem;
+    word-spacing: 4px;
+}
+
+.abt--small{
+    max-width: 70%;
+    font-size: 1rem;
+    margin-top: 1em;
+    line-height: 1.5rem;
 }
