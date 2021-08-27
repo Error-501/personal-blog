@@ -66,18 +66,19 @@
 
 header{
     background: var(--blackb);
-    padding:1.5em;
+    padding:1em;
     display: flex;
 
 }
 
 @media (max-width: 600px) {
     header {
-      flex-direction: column;
-      justify-content:center;
-      align-items:center;
+        flex-direction: column;
+        justify-content:center;
+        align-items:center;
     }
-  }
+}
+
 header h4{
     padding-left: 10%;
     color:whitesmoke;
@@ -300,29 +301,51 @@ nav{
 }
 
 
+.material-icons.md-light { 
+    color: rgba(255, 255, 255, 1);
+}
+
+
+@media (max-width: 600px) {
+    .gal--head {
+        flex-direction: row;
+        justify-content:center;
+        align-items:center;
+    }
+}
+
+
+.gal--back{
+    display: block;
+    line-height: 1rem;
+    margin: 0px 10px 0px 5px;
+}
+
+.gal--back:hover{
+    color: var(--orange);
+    font-size: 1.9rem;
+    line-height: .5rem;
+    transform: translateY(8px);
+
+}
 
 .lite{
     opacity: .6;
 }
 
-.gal--head{
+.gal--txt{
     font-family: 'Cardo', serif;
     padding:0;
     font-style: italic;
     font-size: 1.3rem;
     letter-spacing: 0em;
     font-weight: 100;
-    
 }
 
 .gal--grid-con
 {
     background: var(--blacka);
     min-height: 100vh;
-    padding-top:1%;
-    padding-right: .5rem;
-    margin-left:-3vw;
-
 }
 
 .gal--grid{
@@ -332,9 +355,12 @@ nav{
     grid-template-columns: repeat(auto-fill, minmax(var(--grid-min-size), 1fr));
     grid-gap: .3rem;
 
+    margin:0;
+    padding: .5rem;
+
 }
 
-li {
+.gal--grid li {
     list-style: none;
     padding: minmax(5rem,100vw) 0rem;
     width:100%;
