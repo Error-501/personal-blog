@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>the Gallery</title>
+
+    <script type="text/javascript">
+  
+        // JavaScript code to pick 
+        // a random color from array
+        function pickColor() {
+              
+            // Array containing colors
+            var colors = [
+                '#ffca28', '#c2185b', '#37474f',
+                '#f50057', '#f4511e', '#3f51b5',
+                '#ef5350', '#e040fb', '#b388ff'
+            ];
+              
+            // selecting random color
+            var random_color = colors[Math.floor(
+                    Math.random() * colors.length)];
+            
+            let lis = document.getElementsByTagName('li');
+
+            for(var i =0;i < lis.length;i++){
+                random_color = colors[Math.floor(
+                    Math.random() * colors.length)];
+                lis[i].style.backgroundColor = random_color;
+            }
+        } 
+        window.onload=pickColor;
+    </script>
+
+    <link rel="icon" href="D:\Google Classroom\4th year\Web Programming Lab\Web App\media\logo.png">
+    
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="css/master-style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cardo:ital@1&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="sticky">
+        <h6 class="cen gal--head white"><i class="lite">The Gallery</i> - the house of beautiful abominations</h6>
+    </header>
+    <div class="gal--grid-con">
+        <ul class="gal--grid">
+            <li id="pick"></li>
+            <li id="pick"></li>
+            <li id="pick"></li>
+            <li id="pick"></li>
+            <li id="pick"></li>
+            <li id="pick"></li>
+            <li id="pick"></li>
+            <li id="pick"></li>
+            <li id="pick"></li>
+            <li id="pick"></li>
+        </ul>
+    </div>
+
+</body>
+</html>

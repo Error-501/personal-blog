@@ -63,6 +63,7 @@
  */
 
 
+
 header{
     background: var(--blackb);
     padding:1.5em;
@@ -283,4 +284,60 @@ nav{
     font-size: 1rem;
     margin-top: 1em;
     line-height: 1.5rem;
+}
+
+
+/*
+================
+  Gallery Page
+================
+ */
+
+.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+
+
+
+.lite{
+    opacity: .6;
+}
+
+.gal--head{
+    font-family: 'Cardo', serif;
+    padding:0;
+    font-style: italic;
+    font-size: 1.3rem;
+    letter-spacing: 0em;
+    font-weight: 100;
+    
+}
+
+.gal--grid-con
+{
+    background: var(--blacka);
+    min-height: 100vh;
+    padding-top:1%;
+    padding-right: .5rem;
+    margin-left:-3vw;
+
+}
+
+.gal--grid{
+    --grid-min-size:16rem;
+    display: grid;
+
+    grid-template-columns: repeat(auto-fill, minmax(var(--grid-min-size), 1fr));
+    grid-gap: .3rem;
+
+}
+
+li {
+    list-style: none;
+    padding: minmax(5rem,100vw) 0rem;
+    width:100%;
+    min-height: 200px;
+    /* background: #f86d0a; */
 }
