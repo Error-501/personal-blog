@@ -8,6 +8,8 @@
       --blacka:#161616;
       --blackb:#0a0a0a;
       --orange:#f86d0a;
+      --lgray:gray;
+      --wool:#fff;
   }
 
 .container{
@@ -27,7 +29,7 @@
     .container{
         grid-template:
             "start pro" 92vh
-            "w1 w1" 80vh
+            "w1 w1" 65vh
             "b1 b1" 80vh
             "w2 w2" 80vh
             "epi epi" 80vh /
@@ -129,7 +131,7 @@ nav{
 
  .start{
     grid-area: start;
-    background-image:url("D:\\Google Classroom\\4th year\\Web Programming Lab\\Web App\\media\\flower pot.png") ;
+    background-image:url("E:/Google Classroom/4th year/Web Programming Lab/Web App/media/flower pot.png") ;
     background-position:center;
     background-size: cover;
     background-color: rgb(0, 167, 233);
@@ -143,10 +145,11 @@ nav{
 }
 
 .pro{
+    background: var(--blackb);
     grid-area: pro;
     display: flex;
     flex-grow: 1;
-    font-size: 1rem;
+    font-size: .8rem;
     padding: 1em;
     align-items: center;
 }
@@ -167,23 +170,52 @@ nav{
     content:"";
     width: 1em;
     height: .5rem;
-    background: #fff;
+    background: var(--wool);
 
 }
+
+/*
+================
+Section - Posts
+================
+ */
 
 .w1{
     background: #fff;
     grid-area: w1;
+    
 }
 
+.w1--title{
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+.w1 h1{
+    padding: 1em;
+    color:var(--orange);
+    font-family:'Teko', sans-serif;
+    font-weight: lighter;   
+}
+
+.w1 h1::after{
+    display: block;
+    content:"";
+    width: 7.5ch;
+    height: .1em;
+    margin-top:-7px ;
+    background:var(--lgray);
+}
 
 .w2{
-    background: #fff;
+    background:var(--wool);
     grid-area: w2;
 }
 
 .b1{
-    background: #000;
+    background:var(--blacka);
     grid-area: b1;
 }
 .image{
@@ -193,6 +225,10 @@ nav{
     
 }
 
+.epi{
+    background: var(--blacka);
+    grid-area: epi;
+}
 
 /*
 ================
@@ -202,6 +238,7 @@ nav{
  .abt--con {
     position: relative;
     width: 100%;
+    max-height:80vh;
 }
 
 
@@ -218,7 +255,7 @@ nav{
     /* background: #f00; */
     display:block;
     margin-inline: auto;
-    margin-bottom: -10%;
+    margin-bottom: -20%;
     margin-top: -5%;
     width:85%;
     object-fit: cover;
@@ -305,28 +342,35 @@ nav{
     color: rgba(255, 255, 255, 1);
 }
 
+.material-icons.md-24 { 
+    font-size: 24px; 
+}
+
+.gal--head {
+    padding:1rem;
+}
 
 @media (max-width: 600px) {
     .gal--head {
         flex-direction: row;
         justify-content:center;
         align-items:center;
+        padding: 1vw;
     }
 }
 
 
 .gal--back{
     display: block;
-    line-height: 1rem;
-    margin: 0px 10px 0px 5px;
+    cursor:pointer;
+    text-decoration:none;
 }
 
 .gal--back:hover{
     color: var(--orange);
-    font-size: 1.9rem;
-    line-height: .5rem;
-    transform: translateY(8px);
-
+    transition:.2s ease-in-out;
+    text-shadow: 2px 0 10px var(--orange);
+    transform: scale(1.2);
 }
 
 .lite{
@@ -335,11 +379,11 @@ nav{
 
 .gal--txt{
     font-family: 'Cardo', serif;
-    padding:0;
     font-style: italic;
-    font-size: 1.3rem;
+    font-size:min(1.3rem,2.5vw);
     letter-spacing: 0em;
     font-weight: 100;
+    padding:0;
 }
 
 .gal--grid-con
@@ -349,7 +393,7 @@ nav{
 }
 
 .gal--grid{
-    --grid-min-size:16rem;
+    --grid-min-size:300px;
     display: grid;
 
     grid-template-columns: repeat(auto-fill, minmax(var(--grid-min-size), 1fr));
@@ -362,8 +406,8 @@ nav{
 
 .gal--grid li {
     list-style: none;
-    padding: minmax(5rem,100vw) 0rem;
+    padding: minmax(5rem,100vw) 2rem;
     width:100%;
-    min-height: 200px;
+    min-height: 350px;
     /* background: #f86d0a; */
 }
