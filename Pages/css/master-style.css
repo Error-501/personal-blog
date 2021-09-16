@@ -131,7 +131,7 @@ nav{
 
  .start{
     grid-area: start;
-    background-image:url("E:/Google Classroom/4th year/Web Programming Lab/Web App/media/flower pot.png") ;
+    background-image:url("../../media/flower\ pot.png") ;
     background-position:center;
     background-size: cover;
     background-color: rgb(0, 167, 233);
