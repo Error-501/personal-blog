@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Important!!!</title>
+
+
+    <style>
+        table,th
+        {
+            border: 1px solid greenyellow;
+        }
+        td
+        {
+            border: 1px solid red;
+        }
+
+        .imap{
+            width: 700px;
+            height: 500px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Important Stuff</h1>
+    <div class="tables">
+        <table >
+            <tr>
+                <th>R1</th>
+                <th>R2</th>
+                <th>R3</th>
+              </tr>
+              <tr>
+                <td>TABLES</td>
+                <td>are</td>
+                <td>useful</td>
+              </tr>
+              <tr>
+                <td>for</td>
+                <td>this</td>
+                <td>site</td>
+              </tr>
+        </table>
+    </div>
+    <br>
+    <br>
+    <div class="iframe">
+        <iframe src="index.html" title="google" width="100%" height="500px"></iframe> 
+    </div>
+
+    <div class="imap">
+        IMAGE MAP
+        <img src="../media/image map.jpg" alt="image map" width="100%" height="100%" usemap="#try">
+        <map name="try">
+            <area shape="poly" coords="0,0,573,0,120,495,0,495"  onclick="blue()">
+            <area shape="poly" coords="425,267,470,218,593,346,548,398"  onclick="car()">
+        </map>
+    </div>
+
+    <script>
+        function blue() {
+          alert("You clicked the blue!");
+        }
+        function car() {
+          alert("You clicked the car!");
+        }
+        </script>
+</body>
+</html>

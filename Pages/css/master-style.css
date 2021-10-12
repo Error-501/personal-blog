@@ -411,3 +411,48 @@ Section - Posts
     min-height: 350px;
     /* background: #f86d0a; */
 }
+
+/*
+==================
+  Resources Page
+=================
+ */
+
+ .re--cont{
+     display: grid;
+     grid-template-rows:5em 50vh auto 10em; 
+     grid-template-columns: 1fr 5fr 2fr 1fr;
+     grid-template-areas:
+     "re re re re"
+     "title title title title"
+     ". main side ."
+     "foot foot foot foot";
+ }
+
+ .re--title{
+     grid-area: re;
+     align-self: center;
+    justify-self: center;
+ }
+
+ .re--main_title{
+     grid-area: title;
+     align-self: center;
+     justify-self: center;
+ }
+
+
+ .re--main{
+    grid-area: main;
+    background:#161616;
+}
+
+.re--side_cont{
+    grid-area: side;
+    background:#f86d0a;
+}
+
+.re--foot{
+    grid-area: foot;
+    background:#f86d0a;
+}
