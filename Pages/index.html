@@ -9,6 +9,8 @@
     <!-- stylesheet -->
     <link rel="stylesheet" href="css/master-style.css">
 
+    <!-- js -->
+    <script src="js/index.js"></script>
 
     <!-- googlefonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -30,6 +32,24 @@
     </header>
     <div class="container">
         <div class="start">
+            <div class="carousel--cont">
+                <div class="carousel__nav">
+                    <button class="carousel__indicator current--slide"></button>
+                    <button class="carousel__indicator"></button>
+                    <button class="carousel__indicator"></button>
+                </div>
+                <ul class="carousel">
+                    <li class="carousel--slide current--slide">
+                        <img class="carousel_image" src="..//media//Carousel//3.png" alt="">
+                    </li>
+                    <li class="carousel--slide">
+                        <img class="carousel_image" src="..//media//Carousel//2.png" alt="">
+                    </li>
+                    <li class="carousel--slide">
+                        <img class="carousel_image" src="..//media//Carousel//1.png" alt="">
+                    </li>
+                </ul>
+            </div>
         </div>
         <div class="pro">
             <h1 class="white">Be Curious</h1>
@@ -60,5 +80,10 @@
     <footer>
         
     </footer>
+    <script>
+        var page = fileName();
+        console.log(page);
+        runFunction();
+    </script>
 </body>
 </html>
