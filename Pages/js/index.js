@@ -73,6 +73,20 @@ function carouselControl() {
     })
 }
 
+function loginPop(){
+    const container=document.querySelector(".login--popup_cont");
+    container.style.display="block";
+}
+
+$(document).mouseup(function(e){
+    var container = $("#loginCont");
+ 
+    // If the target of the click isn't the container
+    if(!container.is(e.target) && container.has(e.target).length === 0){
+        container.hide();
+    }
+});
+
 
 function fileName() {
     var url = window.location.pathname;

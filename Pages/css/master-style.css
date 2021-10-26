@@ -8,8 +8,11 @@
 :root {
     --blacka: #161616;
     --blackb: #0a0a0a;
+    --blackc: #242629;
     --orange: #f86d0a;
     --lgray: gray;
+    --red: #F54C4C;
+    --blue: #0792f5;
     --wool: #fff;
 }
 
@@ -101,15 +104,150 @@ nav {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.nav_list a {
+.nav_list a:nth-child(1){
     color: white;
     text-decoration: none;
 }
 
-.nav_list a:hover {
+.nav_list a:nth-child(1):hover,
+a:nth-child(1):focus {
     color: var(--orange);
     text-decoration: none;
     transition: .3s;
+} 
+
+/*
+================
+     Login-stuff 
+================
+ */
+
+.chead--cont {
+    width: 35px;
+    height: 25px;
+
+}
+
+.login--btn {
+    transform: translateY(-5px);
+    width: 100%;
+    height: 100%;
+    filter: invert();
+}
+
+.login--btn:hover,
+.login--btn:focus {
+    fill: var(--blue);
+}
+
+.login--popup_cont {
+    display: none;
+
+    max-width: 300px;
+    width: 300px;
+    height: auto;
+
+    background: var(--blackc);
+    background-image:
+        linear-gradient(to bottom right, rgba(0, 0, 0, 0), 
+        var(--blackb) 130%);
+    border: 5px;
+    border-radius: 3px;
+
+    position: absolute;
+    z-index: 5;
+    right: 10%;
+    top: 10%;
+    transition: display ease-in 250ms;
+}
+
+.login--popup {
+    padding: 1.6em;
+
+    font-size: .9rem;
+    font-style: oblique;
+    font-weight: 300;
+    font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+.form {
+    margin: 1.5em 0.5em 0;
+}
+
+.form__label {
+    display: flex;
+  }
+  
+  .form__text {
+    all: unset;
+    display: block;
+    margin: .25em 0 1em;
+    background: var(--blackb);
+    width: 100%;
+    padding: .6em;
+
+  }
+  
+
+.form__tooltip {
+    font-size: .7rem;
+    background: var(--red);
+    display: inline-block;
+    width: .8rem;
+    height: .8rem;
+    border-radius: 50%;
+    text-align: center;
+    align-self: center;
+    margin-left: .5em;
+    position: relative;
+}
+
+.form__tooltip::after {
+    content: attr(data-tooltip);
+    display: none;
+    position: absolute;
+    padding: 1em;
+    background: var(--blackb);
+    bottom: 1.5em;
+    text-align: left;
+    width: 250px;
+    color: var(--red);
+}
+
+.form__tooltip:hover::after {
+    display: block;
+}
+
+
+.forgotpswd{
+    display: block;
+    height: 5ch;
+    /* background: #f00; */
+    color:var(--red);
+}
+
+.forgotpswd:hover,.forgotpswd:focus{
+    color:var(--red);
+}
+
+
+.login_inner--btn{
+    width: 50px;
+    height: 25px;
+    border: none;
+
+    padding: .2em;
+    text-transform: uppercase;
+    background:var(--red);
+
+    transform: scale(1);
+    transition: transform ease-in-out 150;
+}
+
+.login_inner--btn:hover{
+    transform: scale(1.1);
+    font-size: .8rem;
 }
 
 
@@ -121,18 +259,19 @@ nav {
 
 .start {
     grid-area: start;
-    background-color: rgb(0, 167, 233); 
+    background-color: rgb(0, 167, 233);
     overflow: hidden;
 }
 
-.carousel--cont{
+.carousel--cont {
     width: 100%;
     height: 100%;
     margin: 0;
     padding: 0;
     position: relative;
 }
-.carousel__nav{
+
+.carousel__nav {
     position: absolute;
     z-index: 1;
     display: flex;
@@ -141,14 +280,15 @@ nav {
     padding: 2em;
 }
 
-.carousel__indicator{
+.carousel__indicator {
     width: 7px;
-    height: 7px;
+    height: 8px;
     border: none;
-    background: rgba(255, 255, 255, .4);
+    background: rgba(255, 255, 255, .3);
+    transition: background ease-in 250ms;
 }
 
-.carousel__indicator.current--slide{
+.carousel__indicator.current--slide {
     background: rgba(255, 255, 255, .7);
 }
 
@@ -324,7 +464,8 @@ Section - Posts
     text-transform: uppercase;
 }
 
-.abt--con:hover .abt--over {
+.abt--con:hover,
+.abt--con:focus .abt--over {
     transition: .5s ease-in-out;
     opacity: .98;
 }
@@ -412,7 +553,7 @@ Section - Posts
     text-decoration: none;
 }
 
-.gal--back:hover {
+.gal--back:hover,.gal--back:focus {
     color: var(--orange);
     transition: .2s ease-in-out;
     text-shadow: 2px 0 10px var(--orange);
@@ -456,6 +597,7 @@ Section - Posts
     min-height: 350px;
     /* background: #f86d0a; */
 }
+
 
 /*
 ==================
