@@ -20,8 +20,8 @@
     <!-- googlefonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Holtwood+One+SC&family=Teko&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&family=Holtwood+One+SC&family=Teko
+    &family=Jost:ital,wght@1,300&family=Exo:wght@500&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -40,12 +40,12 @@
                         <div class="login--popup white">
                             <strong>this Site don't deserve a login page</strong>
                             <form class="form" action="">
-                                <label class="form__label" for="email">Your Email <span class="form__tooltip" data-tooltip="Please enter your email address">?</span></label>
-                                <input class="form__text" type="email" id="email" name="email">
+                                <label class="form__label" for="email">Email <span class="form__tooltip" data-tooltip="Please enter your email address">?</span></label>
+                                <input class="form__text white" type="email" id="email" name="email" required>
                                 <label class="form__label" for="password">Password <span class="form__tooltip" data-tooltip="Minimum 8 characters, at least one capital one number and one special character">?</span></label>
-                                <input class="form__text" type="password" id="password" name="password">
+                                <input class="form__text white" type="password" id="password" name="password" required>
                                 <a href="#" class="forgotpswd">Forgot Password?</a> 
-                                <button class="login_inner--btn">Log In</button>  
+                                <button class="login_inner--btn" type="submit" value="Submit" >Log In</button>  
                             </form>
                         </div>
                     </div>
