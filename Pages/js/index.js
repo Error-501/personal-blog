@@ -21,8 +21,14 @@ function pickColor() {
     }
 }
 
+/* 
+=============
+Index Page
+=============
+*/
 
-function carouselControl() {
+
+function indexControl() {
     const carousel = document.querySelector('.carousel');
     const slides = Array.from(carousel.children);
     const dotsNav = document.querySelector('.carousel__nav');
@@ -62,31 +68,76 @@ function carouselControl() {
     // when I click the nav indicators, move to that slide
     dotsNav.addEventListener('click', e => {
       
-      const targetDot = e.target.closest('button');
-      if (!targetDot) return;
+        const targetDot = e.target.closest('button');
+        if (!targetDot) return;
       
-      const currentSlide = carousel.querySelector('.current--slide');
-      const targetIndex = dots.findIndex(dot => dot === targetDot);
-      const targetSlide = slides[targetIndex];
+        const currentSlide = carousel.querySelector('.current--slide');
+        const targetIndex = dots.findIndex(dot => dot === targetDot);
+        const targetSlide = slides[targetIndex];
       
-      moveToSlide(currentSlide, targetSlide, targetDot, targetIndex);
-    })
-}
+        moveToSlide(currentSlide, targetSlide, targetDot, targetIndex);
+    });
 
-function loginPop(){
-    const container=document.querySelector(".login--popup_cont");
-    container.style.display="block";
-}
-
-$(document).mouseup(function(e){
-    var container = $("#loginCont");
- 
-    // If the target of the click isn't the container
-    if(!container.is(e.target) && container.has(e.target).length === 0){
-        container.hide();
+    function loginPop(){
+        const container=document.querySelector(".login--popup_cont");
+        container.style.display="block";
     }
-});
 
+    indexControl.loginPop = loginPop;
+    
+    $(document).mouseup(function(e){
+        var container = $("#loginCont");
+     
+        // If the target of the click isn't the container
+        if(!container.is(e.target) && container.has(e.target).length === 0){
+            container.hide();
+        }
+    });
+}
+
+
+
+/* 
+=============
+About Page
+=============
+*/
+
+function aboutControl() {
+    let abtCount = $("#aboutCount");
+
+    function setCookie(cname,cvalue) {
+        const d = new Date();
+        d.setTime(d.getTime() + 30*1000);
+        let expires = "expires=" + d.toGMTString();
+        document.cookie = cname + "=" + cvalue + ";" +"SameSite=Lax;" + expires + ";";
+    }
+      
+    function getCookie() {
+    let deCookie = decodeURIComponent(document.cookie);
+    if(deCookie!=""){
+        return parseInt(deCookie.split("=")[1]);
+    } else {
+        return 1;
+    }
+    }
+      
+    function checkCookie() {
+        let count = getCookie("count");
+        let strCount = "" + count;
+        console.log(count);
+        count+=1;
+        if (count >= 10) {
+            count = 1;
+        }
+        abtCount.text(strCount);
+        console.log(strCount);
+        setCookie("count", parseInt(count));
+    }
+
+    aboutControl.checkCookie = checkCookie;
+    
+}
 
 function fileName() {
     var url = window.location.pathname;
@@ -101,10 +152,14 @@ function fileName() {
 function runFunction() {
     switch (page) {
         case "index.html":
-            carouselControl();
+            indexControl();
             break;
         case "gallery.html":
             pickColor();
+            break;
+        case "about.html":
+            aboutControl();
+            aboutControl.checkCookie();
             break;
         default:
             break;

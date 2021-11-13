@@ -9,46 +9,43 @@
     <!-- stylesheet -->
     <link rel="stylesheet" href="css/master-style.css">
 
+    <!-- jQuery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
+    <!-- js -->
+    <script src="js/index.js"></script>
+   
     <!-- googlefonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Arvo:wght@700&family=Suez+One&family=Josefin+Sans:wght@100&display=swap" rel="stylesheet">
 </head>
-<body>
-    <header >
-        <h4>header<span class="dot">:</span></h4>
-        <nav class="nav_bar">
-            <ul class="nav_list">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="posts.html">Posts</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="re.html">Resources</a></li>
-                <li><a href="about.html">About</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <div class="abt--con">
-        <div class="abt--evl">
-            <img class="abt--img"  src="..//media//pexels4.png">
-            <div class="abt--over">
-                <h3 class="cen white"> About </h3>
-                <div class="abt--content">
-                    <div class="smile--con">
-                        <img class="smile" src="..//media//Smile1.png" alt="Smile">
-                        <h4 class="ser white cen">*Seriously</h4>
-                    </div>
-                    <div class="abt--txt white">
-                        Page  to  share  thoughts
-                        <div class="abt--small">This site is designed to act as a personal blog for an individual. 
-                            Anything that user finds interesting can be added to this site with several sections like 
-                            gallery, posts, resources. Have fun exploring ! </div>
-                    </div>
-                </div>
-                
+<body class="black_bg">
+    <div class="abt--cont">
+        <div class="abt--header white">
+            <div class="abt--title rotate">
+                About.
+            </div>
+            <div class="abt--cnt" id="aboutCount">
             </div>
         </div>
+        <div class="abt--static white">
+            Hallo
+        </div>
+        <div class="abt--dynamic gray">
+            <div class="abt--sub2">
+                <span class='emp1'>H</span>allo &#62; Nerds!
+            </div>
+        </div>
+        <div class="abt--end">
+
+        </div>
     </div>
+    <script>
+        var page = fileName();
+        console.log(page);
+        runFunction();
+    </script>
 </body>
 </html>
