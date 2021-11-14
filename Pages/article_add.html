@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0  maximum-scale=1.0, user-scalable=0">
+    <title>@IR</title>
+    <link rel="icon" href="..//media//logo.png">
+    
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="css/master-style.css">
+
+    <!-- jQuery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- js -->
+    <script src="js/index.js"></script>
+
+    <!-- TinyMCE text Editor -->
+    <script src="https://cdn.tiny.cloud/1/6e3esh50sif5svldkmdkqi30boxkvmtsfoctxja4qlijmifl/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+    <!-- Init TinyMCE -->
+    <script>
+     tinymce.init({
+      selector: '#contentArea',
+      menubar:'false'
+    });
+    </script>
+ 
+    <!-- googlefonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&family=Holtwood+One+SC&family=Teko
+    &family=Jost:ital,wght@1,300&family=Exo:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h4>header<span class="dot">:</span></h4>
+        <nav class="nav_bar">
+            <ul class="nav_list">
+                <li><a href="posts.html">Posts</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="re.html">Resources</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+      <div class="form_cont white">
+            <form method="post" action="http:\\127.0.0.1\cgi-bin\article.pl">
+                <label class="form_label_aa" for="title">Title</label>
+                <input type="text" class="in--title in_aa" name="title" placeholder="Blog Title">
+                <label class="form_label_aa" for="summary">Summary</label>
+                <input type="text" name="summary" class="in--summary in_aa" placeholder="Blog Summary">
+                <label class="form_label_aa lb--content" for="content">Content</label>
+                <textarea class="in--content in_aa" id="contentArea" name="content"></textarea>
+                <input type="submit" name="Submit" value="Add article" class="form_aa--submit" >
+            </form>
+      </div>
+</body>
+</html>
